@@ -1,3 +1,4 @@
+//チャネルを利用した同期
 package main 
 import(
 	"fmt"
@@ -11,7 +12,7 @@ func main() {
 	c := make(chan int)
  
 	for i := 0; i < goroutines; i++ {
-		
+
 	go func(s chan<- int) {
 
 		//ダミーの処理として乱数により1~10秒待機
